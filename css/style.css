@@ -14,7 +14,7 @@
 }
 body{
     background-color: var(--bgcolor);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 li,ol{
     list-style: none;

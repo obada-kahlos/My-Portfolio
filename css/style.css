@@ -1,0 +1,1008 @@
+:root{
+    --bgcolor : #0d0a1f;
+    --hcolor : #fff;
+    --textcolor : #ddd; 
+    --white : #fff;
+    --navcolor : #334257;
+    --bluecolor :#3688b1;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--bgcolor);
+    /* overflow: hidden; */
+}
+li,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+textarea:focus{
+    outline: none;
+}
+input[type="checkbox"]{
+    display: none;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: serif;
+    color: var(--white);
+    margin: 20px auto;
+}
+
+@media (max-width : 767px){
+    h2{
+        font-size: 26px;
+    }
+}
+/************************************ Start header navbar ***********************************/
+
+header{
+    width: 100%;
+    background-color: #333;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navcolor);
+    border-bottom:4px solid var(--bluecolor) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+header .logo h3{
+    color: #fff;
+    font-size: 26px;
+    line-height: 70px;
+    margin-left: 25px;
+}
+header .logo h3 a{
+    color: #fff;
+}
+header nav ul{
+    display: inline-block;
+}
+header nav ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin-right: 40px;
+    font-size: 18px;
+    position: relative;
+}
+header nav ul li.active::before{
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 3px;
+    bottom: 20px;
+    left: -3px;
+    background-color: var(--bluecolor);
+    transition: 0.4s;
+    z-index: 2;
+}
+
+header nav ul li::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 20px;
+    left: -3px;
+    background-color: var(--bluecolor);
+    transition: 0.4s;
+}
+header nav ul li:hover:before{
+    width: 105%;
+}
+header nav ul li a{
+    color: var(--white);
+}
+header a.cv{
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: var(--white);
+    padding: 10px 15px;
+    transition: 0.6s ease;
+    background: #548CA8;
+
+}
+header a.cv:hover{
+    background: #548CA8;
+    box-shadow: 0 0 30px #548CA8 , 0 0 60px #548CA8 , 0 0 60px #548CA8;
+}
+
+label{
+    display: none;
+}
+
+@media (max-width : 1024px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /* header .navbar{
+        width: 100%;
+        transform: translateX(-100%);
+        transition: 0.4s ease-in-out;
+    } */
+    header nav ul{
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        background-color: #121221;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index:2;
+    }
+    header nav ul li{
+        display: block;
+    }
+    header nav ul li.active::before{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        bottom: 20px;
+        left: 30%;
+        background-color: var(--bluecolor);
+        transition: 0.4s;
+    }
+    header nav ul li::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: 20px;
+        left: 30%;
+        background-color: var(--bluecolor);
+        transition: 0.4s;
+    }
+    header nav ul li:hover:before{
+        width: 100px;
+    }
+    header nav ul li a{
+        color: #fff;
+    }
+    header a.cv{
+        display: none;
+    }
+    header nav label{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: var(--white);
+        cursor: pointer;
+    }
+    #nav:checked ~ ul{
+        left: 0;
+    }
+}
+/************************************ End header navbar ***********************************/
+
+
+/************************************ start first-section ***********************************/
+
+.first-section .first.flex-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bgcolor);
+}
+
+
+/* start first-section first */
+.first-section .first.flex-box .left{
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid var(--bluecolor);
+    margin-top: 100px;
+}
+.first-section .first.flex-box .left img{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 5px solid var(--bluecolor);
+}
+.first-section .first.flex-box .left h3{
+    color: var(--hcolor);
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+.first-section .first.flex-box .left p{
+    color: var(--hcolor);
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.first-section .first.flex-box .left p.social{
+    color: var(--textcolor);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.first-section .first.flex-box .left ul{
+    display: inline-block;
+}
+.first-section .first.flex-box .left ul li{
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: var(--bluecolor);
+}
+
+.first-section .first.flex-box .left ul li a{
+    color: var(--white);
+}
+
+
+.first-section .first.flex-box .left .cv{
+    display: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--white);
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color : rgba(54, 136, 177,0.6);;
+    transition: 0.4s ease;
+    text-align: center;
+}
+.first-section .first.flex-box .left .cv:hover{
+    background: #548CA8;
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
+}
+
+
+/* start first-section center */
+
+.first-section .first.flex-box .center{
+    width: 70%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+.first-section .first.flex-box .center h3{
+    color: var(--hcolor);
+    font-weight: bold;
+    margin:10px 0 30px 0;
+    padding: 5px;
+    font-size: 40px;
+    width: fit-content;
+    border-bottom: 1px solid var(--bluecolor);
+}
+.first-section .first.flex-box .center span.sp{
+    width: 50px;
+    height: 10px;
+    background-color: var(--bluecolor);
+    border-radius: 10px;
+    margin-top: -35px;
+    margin-left: 65px;
+}
+.first-section .first.flex-box .center p.p-1{
+   color: var(--textcolor);
+   margin: 2em 0;
+   padding: 5px;
+   line-height: 2;
+   letter-spacing: 1px;
+   width: 80%;
+}
+
+.first-section .first.flex-box .center p.p-2{
+    color: var(--textcolor);
+    padding: 5px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.first-section .first.flex-box .center p.p-2 i{
+    color: var(--bluecolor);
+    margin-right: 10px;
+}
+.first-section .first.flex-box .center p.p-2 span{
+    font-weight: bold;
+    color: var(--textcolor);
+}
+.first-section .first.flex-box .center p.p-2 a{
+    font-weight: bold;
+    color: var(--textcolor);
+}
+
+
+/* start media for About me  */
+
+@media (max-width: 767px){
+    .first-section .first.flex-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin-top: 70px;
+        padding: 0;
+    }
+    .first-section .first.flex-box .left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        border-right: none;
+    }
+    .first-section .first.flex-box .left .cv{
+        display: block;
+    }
+    .first-section .first.flex-box .center{
+        width: 100%;
+        margin-top: 0;
+    }
+    .first-section .first.flex-box .center p.p-1{
+        width: 100%;
+    }
+    
+}
+
+@media(min-width : 768px){
+    .first-section .first.flex-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+    }
+    .first-section .first.flex-box .left{
+        width: 50%;
+        border-bottom: 1px solid var(--bluecolor);
+        margin-top: 0;
+    }
+    .first-section .first.flex-box .left .cv{
+        display: block;
+    }
+    .first-section .first.flex-box .center{
+        width: 50%;
+        border-bottom: 1px solid var(--bluecolor);
+        margin-top: 0;
+    }
+    .first-section .first.flex-box .center p.p-1{
+        width: 100%;
+    }
+}
+@media(min-width : 1024px){
+    .first-section .first.flex-box{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+    }
+    .first-section .first.flex-box .left{
+        width: 40%;
+        border-bottom: none;
+        margin-top: 100px;
+    }
+    .first-section .first.flex-box .left .cv{
+        display: none;
+    }
+    .first-section .first.flex-box .center{
+        width: 60%;
+        border-bottom: none;
+        margin-top: 100px;
+    }
+    .first-section .first.flex-box .center p.p-1{
+        width: 80%;
+    }
+    
+}
+
+/************************************ end first-section ************************************/
+
+
+/************************************ Start   skilles **********************************************/
+
+.wrapper-skills{
+    width: 100%;
+    padding: 20px;
+    z-index: -1;
+}
+.wrapper-skills .container{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper-skills .container .my-skills{
+    width: 60%;
+}
+.wrapper-skills .container .my-skills .skills{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.wrapper-skills .container .my-skills .skills .details{
+    width: 100%;
+    color: var(--white);
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.wrapper-skills .container .my-skills .skills .bar{
+    border: 2px solid var(--bluecolor);
+    border-radius: 20px;
+}
+.wrapper-skills .container .my-skills .skills .bar div.progress{
+    height: 9px;
+    border-radius: 10px;
+    background-color: var(--bluecolor);
+    transition: all 2s ease-in-out;
+}
+.wrapper-skills .container .image{
+    width: 35%;
+}
+.wrapper-skills .container .image img{
+    width: 100%;
+}
+@media (max-width: 868px){
+    .wrapper-skills .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .wrapper-skills .container .my-skills{
+        width: 100%;
+    }
+    .wrapper-skills .container .image{
+        width: 80%;
+    }
+}
+
+/************************************ End skilles **********************************************/
+
+
+
+/************************************ Start my services **********************************************/
+.My-services{
+    margin-top: 30px;
+    width: 100%;
+}
+.My-services div.text{
+    position: relative;
+    margin: 20px auto;
+    z-index: -1;
+    margin-top: 30px;
+}
+.My-services div.text span {
+    width: 150px;
+    background-color : rgba(54, 136, 177,0.6);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    left: 50%;
+    font-size: 16px;
+    font-weight: 600;
+}
+  
+.My-services div.text span::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 20%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(54, 136, 177,0.6) transparent transparent transparent;
+}
+.My-services .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+.My-services span{
+    width: 120px;
+    background-color: var(--bluecolor);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+.My-services .container .service{
+    position: relative;
+    z-index: 1;
+    max-width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--navcolor);
+    color: #fff;
+    text-align: center;
+    font-family: serif;
+    cursor: pointer;
+}
+.My-services .container .service::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 0%;
+    background-color: var(--bluecolor);
+    transition: all 0.7s ease-in-out;
+}
+.My-services .container .service:hover:before{
+    height: 100%;
+}
+.My-services .container .service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0%;
+    background-color: var(--bluecolor);
+    transition: all 0.6s ease-in-out;
+}
+.My-services .container .service:hover:after{
+    height: 100%;
+}
+.My-services .container .service .icon{
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--bluecolor);
+    text-align: center;
+    margin: 25px auto;
+    transition: 0.4s linear;
+    border-radius: 50%;
+    z-index: -1;
+}
+.My-services .container .service:hover{
+    transform: translateY(-10px);
+}
+.My-services .container .service:hover .icon{
+    background-color: var(--bluecolor);
+    color: var(--white);
+}
+.My-services .container .service i{
+    line-height: 70px;
+    font-size: 26px;
+}
+
+.My-services .container .service h3{
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+.My-services .container .service p{
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+@media (max-width : 767px){
+    .My-services .container{
+        padding: 0;
+    }
+    .My-services .container .service{
+        max-width: 90% ;
+    }
+    .My-services div.text span {
+        width: 120px;
+    }
+}
+@media (min-width : 768px){
+    .My-services .container .service{
+        max-width: 45%;
+    }
+    .My-services .container .service.right{
+        max-width: 93%;
+    }
+}
+@media (min-width : 1024px){
+    .My-services .container .service{
+        max-width: 30%;
+    }
+    .My-services .container .service.right{
+        max-width: 30%;
+    }
+}
+/************************************ End my services **********************************************/
+
+
+/************************************ Start my Portfolio **********************************************/
+.my-portfolio{
+    margin-top: 40px;
+    padding: 70px 0;
+}
+.my-portfolio nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-portfolio nav ul{
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.my-portfolio nav ul li{
+    display: inline-block;
+    margin: 20px;
+    margin-right: 10px;
+    border: 1px solid var(--bluecolor);
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.my-portfolio nav ul li.active{
+    color: #fff;
+    padding: 10px 20px;
+    background-color : rgba(54, 136, 177,0.6);
+}
+.my-portfolio nav ul li:hover{
+    color: #fff;
+    background-color : rgba(54, 136, 177,0.6);
+}
+.my-portfolio nav ul li a{
+    color: #fff;
+}
+
+.my-portfolio .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.my-portfolio .container .work{
+    margin: 10px;
+    height: 200px;
+    background-color: var(--navcolor);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+.my-portfolio .container .work img{
+   width: 100%;
+   height: 100%;
+   transition: all 0.6s ease-in-out;
+
+}
+.my-portfolio .container .work:hover img{
+    transform: scale(1.05) rotate(2deg);
+}
+.my-portfolio .container .work:hover{
+    transform: translateY(-10px);
+}
+
+@media (max-width : 1024px){
+    .my-portfolio nav ul li{
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 10px;
+    }
+    .my-portfolio .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .my-portfolio .container .work{
+        width: calc((100% / 3) - 40px);
+        margin: 10px;
+    }
+    
+}
+
+@media (max-width : 767px){
+    .my-portfolio nav ul li{
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 10px;
+    }
+    .my-portfolio .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .my-portfolio .container .work{
+        width: 44%;
+        margin: 10px;
+    }
+    
+}
+
+
+@media (min-width : 1025px){
+    .my-portfolio nav ul li{
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+    }
+    .my-portfolio .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .my-portfolio .container .work{
+        width: calc((100% / 4) - 40px);
+        margin: 10px;
+    }
+    
+}
+
+/************************************ end my Portfolio **********************************************/
+
+
+
+/************************************ Start Contact **********************************************/
+.contact{
+    margin-top: 40px;
+    padding: 30px;
+}
+.contact .container{
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.contact .container .form{
+    width: 60%;
+    padding: 40px;
+}
+.contact label{
+   display: block;
+   color: #fff;
+   font-size: 18px;
+   margin: 10px auto;
+}
+.contact .container .form form input{
+    padding: 10px;
+    margin: 20px auto;
+    background-color: var(--navcolor);
+    border: none;
+    border-bottom: 2px solid var(--bluecolor);
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+ .contact .container .form form button{
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--white);
+    padding: 15px 30px;
+    background-color: #548CA8;
+    margin-top: 20px;
+    transition: 0.4s linear;
+    width: 100%;
+    text-align: center;
+}
+.contact .container .form form button:hover{
+    background: #548CA8;
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
+}
+.contact .container .textarea{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .container .textarea textarea{
+    width: 100%;
+    display: block;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: var(--navcolor);
+    border: none;
+    border-bottom: 2px solid var(--bluecolor);
+    resize: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+@media (max-width : 867px){
+    .contact .container{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .contact .container .image{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .contact .container .form{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .contact .container .textarea{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/************************************ End Contact **********************************************/
+
+
+/************************************ start footer **********************************************/
+footer{
+    padding: 40px;
+    color: #fff;
+    background-color: var(--navcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid var(--bluecolor);
+}
+@media (max-width: 767px){
+    footer{
+        font-size: 14px;
+    }
+}
+
+/************************************ End footer **********************************************/
+
+
+/************************************ start scrool style and buttonup **********************************************/
+
+
+#buttom-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    border: 1px solid var(--bluecolor);
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+}
+#buttom-up:hover{
+    background-color: var(--bluecolor);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--bluecolor);
+    border-radius: 5px;
+}
+
+/************************************ end scrool style and buttonup **********************************************/
+
+
+/************************************* start loading animate **************************************/
+
+.loading-overlay{
+    background: var(--navcolor);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.loading-overlay .spinner{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.loading-overlay .spinner h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+.loading-overlay .spinner div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bluecolor);
+    display: inline-block;
+    margin: 10px 15px;
+    animation: up-down 1s infinite alternate;
+}
+
+.loading-overlay .spinner div.tow {
+    animation-delay: 0.3s;
+}
+.loading-overlay .spinner div.three {
+    animation-delay: 0.6s;
+}
+@media (max-width : 767px){
+    .loading-overlay .spinner div {
+        width: 30px;
+        height: 30px;
+        margin:10px 15px;
+        margin-right: 5px;
+    }
+}
+@keyframes up-down{
+
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+        transform:  scale(1.3);
+    }
+}
+
+
+/************************************* end loading animate **************************************/

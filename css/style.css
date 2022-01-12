@@ -14,7 +14,7 @@
 }
 body{
     background-color: var(--bgcolor);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 li,ol{
     list-style: none;
@@ -700,20 +700,20 @@ label{
 }
 .my-portfolio nav ul li{
     display: inline-block;
-    margin: 20px;
-    margin-right: 10px;
+    margin: 20px 5px;
     border: 1px solid var(--bluecolor);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s ease-in;
     color: #fff;
     letter-spacing: 1px;
+    padding: 10px 20px;
+
 }
 .my-portfolio nav ul li.active{
     color: #fff;
-    padding: 10px 20px;
     background-color : rgba(54, 136, 177,0.6);
 }
 .my-portfolio nav ul li:hover{

@@ -1,5 +1,5 @@
 ///////////////////// navbar swith active 
-$("nav li").on('click', function () {
+$("header nav li").on('click', function () {
     $(this).addClass('active').siblings().removeClass('active');
 })
 
@@ -54,5 +54,33 @@ window.onscroll = function() {
             ele.style = "width : 0";
         })
     }
+}
+
+
+///////////////////// suffil my project [Portfolio]
+let portfolioList = document.querySelectorAll(".my-portfolio ul li");
+let itembox = document.querySelectorAll('.work');
+
+for(let i = 0; i<=portfolioList.length;i++){
+
+    portfolioList[i].addEventListener('click' , function(){
+
+        for(let j = 0; j<portfolioList.length;j++){
+            portfolioList[j].classList.remove('active');
+        }
+        this.classList.add('active');
+
+        let datafillter = this.getAttribute('data-fillter');
+  
+        for(let n = 0;i<itembox.length;n++){
+            itembox[n].classList.remove('active');
+            itembox[n].classList.add('hide');
+        
+            if(itembox[n].getAttribute('data-item') == datafillter || datafillter == 'all'){
+                itembox[n].classList.remove('hide');
+                itembox[n].classList.add('active');
+            }
+        }
+    })
 }
 

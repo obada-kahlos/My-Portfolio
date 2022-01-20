@@ -1,10 +1,10 @@
 :root{
+    --main-color :#3688b1;
     --bgcolor : #0d0a1f;
     --hcolor : #fff;
     --textcolor : #ddd; 
     --white : #fff;
     --navcolor : #334257;
-    --bluecolor :#3688b1;
 }
 *{
     padding: 0;
@@ -49,7 +49,7 @@ h2{
     font-weight: 700;
     font-family: serif;
     color: var(--white);
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 @media (max-width : 767px){
@@ -67,7 +67,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: var(--navcolor);
-    border-bottom:4px solid var(--bluecolor) ;
+    border-bottom:4px solid var(--main-color) ;
     position: fixed;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@ header nav ul li.active::before{
     height: 3px;
     bottom: 20px;
     left: -3px;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     transition: 0.4s;
     z-index: 2;
 }
@@ -112,7 +112,7 @@ header nav ul li::before{
     height: 3px;
     bottom: 20px;
     left: -3px;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     transition: 0.4s;
 }
 header nav ul li:hover:before{
@@ -172,7 +172,7 @@ label{
         height: 3px;
         bottom: 20px;
         left: 30%;
-        background-color: var(--bluecolor);
+        background-color: var(--main-color);
         transition: 0.4s;
     }
     header nav ul li::before{
@@ -182,7 +182,7 @@ label{
         height: 3px;
         bottom: 20px;
         left: 30%;
-        background-color: var(--bluecolor);
+        background-color: var(--main-color);
         transition: 0.4s;
     }
     header nav ul li:hover:before{
@@ -229,7 +229,7 @@ label{
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-right: 1px solid var(--bluecolor);
+    border-right: 1px solid var(--main-color);
     margin-top: 100px;
 
 }
@@ -268,7 +268,7 @@ label{
     width: 240px;
     height: 240px;  
     border-radius: 50%;
-    border: 5px solid var(--bluecolor);
+    border: 5px solid var(--main-color);
     
 
 }
@@ -305,7 +305,7 @@ label{
     text-align: center;
     line-height: 30px;
     border-radius: 50%;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
 }
 
 .first-section .first.flex-box .left ul li a{
@@ -349,12 +349,12 @@ label{
     padding: 5px;
     font-size: 40px;
     width: fit-content;
-    border-bottom: 1px solid var(--bluecolor);
+    border-bottom: 1px solid var(--main-color);
 }
 .first-section .first.flex-box .center span.sp{
     width: 50px;
     height: 10px;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     border-radius: 10px;
     margin-top: -35px;
     margin-left: 65px;
@@ -375,7 +375,7 @@ label{
     margin-bottom: 20px;
 }
 .first-section .first.flex-box .center p.p-2 i{
-    color: var(--bluecolor);
+    color: var(--main-color);
     margin-right: 10px;
 }
 .first-section .first.flex-box .center p.p-2 span{
@@ -428,7 +428,7 @@ label{
     }
     .first-section .first.flex-box .left{
         width: 50%;
-        border-bottom: 1px solid var(--bluecolor);
+        border-bottom: 1px solid var(--main-color);
         margin-top: 0;
     }
     .first-section .first.flex-box .left .cv{
@@ -436,7 +436,7 @@ label{
     }
     .first-section .first.flex-box .center{
         width: 50%;
-        border-bottom: 1px solid var(--bluecolor);
+        border-bottom: 1px solid var(--main-color);
         margin-top: 0;
     }
     .first-section .first.flex-box .center p.p-1{
@@ -481,6 +481,7 @@ label{
 }
 .wrapper-skills .container{
     padding: 40px;
+    padding-top:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -489,7 +490,6 @@ label{
     width: 60%;
 }
 .wrapper-skills .container .my-skills .skills{
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 .wrapper-skills .container .my-skills .skills .details{
@@ -500,13 +500,13 @@ label{
     margin-bottom: 10px;
 }
 .wrapper-skills .container .my-skills .skills .bar{
-    border: 2px solid var(--bluecolor);
+    border: 2px solid var(--main-color);
     border-radius: 20px;
 }
 .wrapper-skills .container .my-skills .skills .bar div.progress{
     height: 9px;
     border-radius: 10px;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     transition: all 2s ease-in-out;
 }
 .wrapper-skills .container .image{
@@ -536,7 +536,6 @@ label{
 
 /************************************ Start my services **********************************************/
 .My-services{
-    margin-top: 30px;
     width: 100%;
 }
 .My-services div.text{
@@ -577,7 +576,7 @@ label{
 }
 .My-services span{
     width: 120px;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -607,7 +606,7 @@ label{
     left: 0;
     width: 4px;
     height: 0%;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     transition: all 0.7s ease-in-out;
 }
 .My-services .container .service:hover:before{
@@ -620,7 +619,7 @@ label{
     right: 0;
     width: 4px;
     height: 0%;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     transition: all 0.6s ease-in-out;
 }
 .My-services .container .service:hover:after{
@@ -630,7 +629,7 @@ label{
     display: block;
     width: 70px;
     height: 70px;
-    border: 3px solid var(--bluecolor);
+    border: 3px solid var(--main-color);
     text-align: center;
     margin: 25px auto;
     transition: 0.4s linear;
@@ -641,7 +640,7 @@ label{
     transform: translateY(-10px);
 }
 .My-services .container .service:hover .icon{
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     color: var(--white);
 }
 .My-services .container .service i{
@@ -704,59 +703,70 @@ label{
     margin-bottom: 40px;
 }
 .my-portfolio nav ul li{
+    position: relative;
     display: inline-block;
     margin: 20px 5px;
-    border: 1px solid var(--bluecolor);
+    border: 1px solid var(--main-color);
     font-size: 16px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.4s ease-in;
     color: #fff;
     letter-spacing: 1px;
     padding: 10px 20px;
-
+    transition: 0.4s ease-in;
 }
 .my-portfolio nav ul li.active{
     color: #fff;
-    background-color : rgba(54, 136, 177,0.6);
+    background-color : rgba(54, 136, 177);
 }
-.my-portfolio nav ul li:hover{
+.my-portfolio nav ul li:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: 0.5s linear;
+}
+.my-portfolio nav ul li:hover:after{
     color: #fff;
-    background-color : rgba(54, 136, 177,0.6);
+    width: 100%;
 }
 .my-portfolio nav ul li a{
     color: #fff;
 }
 
 .my-portfolio .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns:  repeat(auto-fill , minmax(300px,1fr));
+    gap: 40px;
 }
-
 .my-portfolio .container .work{
-    margin: 10px;
+    position: relative;
     height: 200px;
     background-color: var(--navcolor);
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.6s ease-in-out;
-    position: relative;
     overflow: hidden;
+    transition: all 0.6s ease-in-out;
 }
 .my-portfolio .container .work img{
    width: 100%;
    height: 100%;
    transition: all 0.6s ease-in-out;
-
 }
 
 .my-portfolio .container .work:hover{
     transform: translateY(-10px);
 }
-.my-portfolio .container .work .view{
+.my-portfolio .container .work .info{
     position: absolute;
     bottom: -120px;
     left: 0;
@@ -764,21 +774,22 @@ label{
     height: auto;
     background-color: rgba(0,0,0,0.8);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     transition: all 0.4s ease-out;
 }
-.my-portfolio .container .work:hover .view{
+.my-portfolio .container .work:hover .info{
     bottom: 0;
 }
-.my-portfolio .container .work .view p{
+.my-portfolio .container .work .info p{
     color: #fff;
     font-size: 18px;
 }
-.my-portfolio .container .work .view i{
+.my-portfolio .container .work .info i{
     font-size: 24px;
-    color: var(--bluecolor);
+    color: var(--main-color);
+    margin-left: 10px;
 }
 
 @media (max-width : 1024px){
@@ -787,17 +798,6 @@ label{
         margin: 5px;
         padding: 8px 10px;
     }
-    .my-portfolio .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-    .my-portfolio .container .work{
-        width: calc((100% / 2) - 40px);
-        margin: 10px;
-    }
-    
 }
 
 @media (max-width : 767px){
@@ -806,37 +806,13 @@ label{
         margin: 5px;
         padding: 8px 10px;
     }
-    .my-portfolio .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-    .my-portfolio .container .work{
-        width: 100%;
-        margin: 10px;
-    }
-    
 }
-
-
 @media (min-width : 1025px){
     .my-portfolio nav ul li{
         display: inline-block;
         margin: 5px;
         padding: 10px 20px;
     }
-    .my-portfolio .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-    .my-portfolio .container .work{
-        width: calc((100% / 3) - 40px);
-        margin: 10px;
-    }
-    
 }
 
 /************************************ end my Portfolio **********************************************/
@@ -871,7 +847,7 @@ label{
     margin: 20px auto;
     background-color: var(--navcolor);
     border: none;
-    border-bottom: 2px solid var(--bluecolor);
+    border-bottom: 2px solid var(--main-color);
     width: 100%;
     font-size: 18px;
     color: #fff;
@@ -908,7 +884,7 @@ label{
     margin: 20px auto;
     background-color: var(--navcolor);
     border: none;
-    border-bottom: 2px solid var(--bluecolor);
+    border-bottom: 2px solid var(--main-color);
     resize: none;
     font-size: 18px;
     color: #fff;
@@ -951,7 +927,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 4px solid var(--bluecolor);
+    border-top: 4px solid var(--main-color);
 }
 @media (max-width: 767px){
     footer{
@@ -976,13 +952,13 @@ footer{
     font-size: 16px;
     color: var(--white);
     text-align: center;
-    border: 1px solid var(--bluecolor);
+    border: 1px solid var(--main-color);
     display: none;
     cursor: pointer;
     z-index: 999;
 }
 #buttom-up:hover{
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
 }
 /* width */
 ::-webkit-scrollbar {
@@ -998,7 +974,7 @@ footer{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--bluecolor);
+    background: var(--main-color);
     border-radius: 5px;
 }
 
@@ -1035,7 +1011,7 @@ footer{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--bluecolor);
+    background-color: var(--main-color);
     display: inline-block;
     margin: 10px 15px;
     animation: up-down 1s infinite alternate;
@@ -1068,7 +1044,6 @@ footer{
 
 
 /************************************* end loading animate **************************************/
-
 .hide{
     display: none;
 }

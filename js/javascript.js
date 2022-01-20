@@ -30,8 +30,8 @@ $(document).ready(function () {
 
 ///////////////////// loding animation
 window.onload = function(){
-$(".loading-overlay .spinner").fadeOut(6000, function () {
-    $(this).parent().fadeOut(2000, function () {
+$(".loading-overlay .spinner").fadeOut(1000, function () {
+    $(this).parent().fadeOut(1000, function () {
         $("body").css("overflow", "auto")
         $(".loading-overlay").remove()
     })
@@ -45,7 +45,7 @@ let section = document.querySelector(".wrapper-skills");
 let progress = document.querySelectorAll(".wrapper-skills .progress");
 
 window.onscroll = function() {
-    if(window.scrollY >= section.offsetTop){
+    if(window.scrollY >= section.offsetTop -100){
         progress.forEach(function (ele) {
             ele.style.width = ele.dataset.width ;
         })
@@ -83,4 +83,3 @@ for(let i = 0; i<=portfolioList.length;i++){
         }
     })
 }
-

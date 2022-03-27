@@ -17,7 +17,7 @@ html{
 }
 body{
     background-color: var(--bgcolor);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 ht
 li,ol{
@@ -745,12 +745,12 @@ label{
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns:  repeat(auto-fill , minmax(300px,1fr));
+    grid-template-columns:  repeat(auto-fill , minmax(400px,1fr));
     gap: 40px;
 }
 .my-portfolio .container .work{
     position: relative;
-    height: 200px;
+    height: 300px;
     background-color: var(--navcolor);
     overflow: hidden;
     cursor: pointer;

@@ -1047,3 +1047,36 @@ footer{
 .hide{
     display: none;
 }
+
+
+.My-Cv{
+    position: absolute;
+    width : 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/Sprinkle.svg) no-repeat center center;
+    background-size: cover;
+}
+.My-Cv .btn-style{
+    padding : 20px;
+}
+.My-Cv .btn-style p{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.My-Cv .btn-style button {
+    padding  : 15PX 30PX ;
+    width : 160px;
+    margin : 20px ; 
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color : #fff;
+    text-align: center;
+    border-radius: 8px;
+}

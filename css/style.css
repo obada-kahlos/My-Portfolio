@@ -17,7 +17,7 @@ html{
 }
 body{
     background-color: var(--bgcolor);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 ht
 li,ol{
@@ -251,6 +251,11 @@ label{
     right: -40px;
     font-size: 40px;
     color: rgb(18, 141, 212);
+}
+@media (max-width : 600px){
+    .first-section .first.flex-box .left .image .lung span.css{
+        right: -20px;
+    }
 }
 .first-section .first.flex-box .left .image .lung span.react{
     position: absolute;
@@ -701,6 +706,7 @@ label{
 
 /************************************ Start my Portfolio **********************************************/
 .my-portfolio{
+    width : 100%;
     margin-top: 40px;
     padding: 70px 0;
 }
@@ -759,6 +765,13 @@ label{
     grid-template-columns:  repeat(auto-fill , minmax(400px,1fr));
     gap: 40px;
 }
+@media (max-width : 500px){
+    .my-portfolio .container{
+        display: grid;
+        grid-template-columns:  repeat(auto-fill , minmax(100%,1fr));
+        gap: 40px;
+    }
+}
 .my-portfolio .container .work{
     position: relative;
     height: 300px;
@@ -802,7 +815,12 @@ label{
     color: var(--main-color);
     margin-left: 10px;
 }
-
+/* .my-portfolio .container .work .info ul li {
+    position: relative;
+}
+.my-portfolio .container .work .info ul li span .whatsappNumer{
+    position: absolute;
+} */
 @media (max-width : 1024px){
     .my-portfolio nav ul li{
         display: inline-block;

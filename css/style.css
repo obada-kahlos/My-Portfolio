@@ -17,7 +17,7 @@ html{
 }
 body{
     background-color: var(--bgcolor);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 ht
 li,ol{

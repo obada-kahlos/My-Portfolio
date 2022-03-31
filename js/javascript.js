@@ -30,8 +30,8 @@ $(document).ready(function () {
 
 ///////////////////// loding animation
 window.onload = function(){
-$(".loading-overlay .spinner").fadeOut(1000, function () {
-    $(this).parent().fadeOut(1000, function () {
+$(".loading-overlay .spinner").fadeOut(4000, function () {
+    $(this).parent().fadeOut(3000, function () {
         $("body").css("overflow", "auto")
         $(".loading-overlay").remove()
     })

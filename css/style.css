@@ -259,18 +259,29 @@ label{
     font-size: 40px;
     color: rgb(18, 141, 212);
 }
-
+/* @keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+} */
 .first-section .first.flex-box .left .image .lung span.react img{
     width: 50px;
     height: 50px;
+    animation: rotate 12s infinite alternate;
 }
 .first-section .first.flex-box .left .img img{
     width: 240px;
     height: 240px;  
     border-radius: 50%;
     border: 5px solid var(--main-color);
-    
-
+    object-fit: cover;
+    object-position: 20% 10%;
 }
 .first-section .first.flex-box .left h3{
     color: var(--hcolor);
@@ -1047,8 +1058,6 @@ footer{
 .hide{
     display: none;
 }
-
-
 .My-Cv{
     position: absolute;
     width : 100%;
@@ -1067,11 +1076,17 @@ footer{
     color: #fff;
     margin-bottom: 5px;
     font-size: 18px;
+    width : 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.My-Cv .btn-style button {
+.My-Cv .Hi{
+    display: flex;
+} 
+.My-Cv .btn-style .btn {
+    position: relative;
     padding  : 15PX 30PX ;
     width : 160px;
+    height: 50px;
     margin : 20px ; 
     text-transform: uppercase;
     font-size: 16px;
@@ -1079,4 +1094,53 @@ footer{
     color : #fff;
     text-align: center;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.4s;
+    /* overflow: hidden; */
+}
+.My-Cv .btn-style .btn:hover:after{
+    width : 100%;
+}
+@media (max-width : 768px){
+    .My-Cv .btn-style .btn{
+        width : 120px;
+        font-size: 14px;
+        margin : 10px ; 
+    }
+}
+.My-Cv .btn-style .btn p{
+    margin: 0;
+}
+.My-Cv .btn-style .btn p.cv-text{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width:100%;
+    height: 100%;
+    transition: 0.4s;
+    line-height: 50px;
+    border-radius: 8px;
+}
+.My-Cv .btn-style .btn:hover p.cv-text{
+    left: 160px;
+}
+.My-Cv .btn-style .btn i{
+    position: absolute;
+    left: -140px;
+    top: 50%;
+    left: -160px;
+    transform: translateY(-50%);
+    height: 100%;
+    width:100%;
+    border-radius: 8px;
+    transition: 0.4s;
+    line-height: 50px;
+    /* background-color: #0d0a1f; */
+}
+.My-Cv .btn-style .btn:hover i{
+    left: 0px;
 }

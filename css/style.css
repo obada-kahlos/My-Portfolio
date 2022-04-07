@@ -17,7 +17,7 @@ html{
 }
 body{
     background-color: var(--bgcolor);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 ht
 li,ol{
@@ -264,17 +264,6 @@ label{
     font-size: 40px;
     color: rgb(18, 141, 212);
 }
-/* @keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(-360deg);
-    }
-} */
 .first-section .first.flex-box .left .image .lung span.react img{
     width: 50px;
     height: 50px;
@@ -312,6 +301,9 @@ label{
 .first-section .first.flex-box .left ul{
     display: inline-block;
 }
+.first-section .first.flex-box .left ul a{
+    color: var(--white);
+}
 .first-section .first.flex-box .left ul li{
     display: inline-block;
     font-size: 16px;
@@ -323,12 +315,6 @@ label{
     border-radius: 50%;
     background-color: var(--main-color);
 }
-
-.first-section .first.flex-box .left ul li a{
-    color: var(--white);
-}
-
-
 .first-section .first.flex-box .left .cv{
     display: none;
     margin-top: 20px;
@@ -815,12 +801,6 @@ label{
     color: var(--main-color);
     margin-left: 10px;
 }
-/* .my-portfolio .container .work .info ul li {
-    position: relative;
-}
-.my-portfolio .container .work .info ul li span .whatsappNumer{
-    position: absolute;
-} */
 @media (max-width : 1024px){
     .my-portfolio nav ul li{
         display: inline-block;
@@ -1047,9 +1027,12 @@ footer .fa-heart{
     background-color: var(--main-color);
     display: inline-block;
     margin: 10px 15px;
+    box-shadow: 0 0 40px #548CA8 , 0 0 60px #548CA8 , 0 0 80px #548CA8;
     animation: up-down 1s infinite alternate;
 }
-
+.loading-overlay .spinner div.one{
+    animation-delay: 0s;
+}
 .loading-overlay .spinner div.tow {
     animation-delay: 0.3s;
 }
@@ -1068,10 +1051,12 @@ footer .fa-heart{
 
     0%{
         opacity: 1;
+        /* filter: hue-rotate(0deg) */
     }
     100%{
         opacity: 0.5;
         transform:  scale(1.3);
+        /* filter: hue-rotate(360deg) */
     }
 }
 

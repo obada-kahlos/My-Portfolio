@@ -45,7 +45,7 @@ let section = document.querySelector(".wrapper-skills");
 let progress = document.querySelectorAll(".wrapper-skills .progress");
 
 window.onscroll = function() {
-    if(window.scrollY >= section.offsetTop -100){
+    if(window.scrollY >= section.offsetTop -250){
         progress.forEach(function (ele) {
             ele.style.width = ele.dataset.width ;
         })

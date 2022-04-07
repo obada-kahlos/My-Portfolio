@@ -958,6 +958,10 @@ footer{
     align-items: center;
     border-top: 4px solid var(--main-color);
 }
+footer .fa-heart{
+    color : red;
+    margin-left: 2px;
+}
 @media (max-width: 767px){
     footer{
         font-size: 14px;
@@ -1099,6 +1103,8 @@ footer{
 }
 .My-Cv .Hi{
     display: flex;
+    justify-content: space-between;
+    width: 100%;
 } 
 .My-Cv .btn-style .btn {
     position: relative;
@@ -1119,16 +1125,16 @@ footer{
     transition: 0.4s;
     /* overflow: hidden; */
 }
+@media (max-width : 768px){
+    .My-Cv .btn-style .btn{
+        width : 130px;
+        font-size: 14px;
+    }
+}
 .My-Cv .btn-style .btn:hover:after{
     width : 100%;
 }
-@media (max-width : 768px){
-    .My-Cv .btn-style .btn{
-        width : 120px;
-        font-size: 14px;
-        margin : 10px ; 
-    }
-}
+
 .My-Cv .btn-style .btn p{
     margin: 0;
 }
